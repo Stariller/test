@@ -1,0 +1,427 @@
+
+    <html>
+    <head>
+        <title>LLM Chunker Combined Performance Report</title>
+        <style>
+            body { font-family: Arial, sans-serif; margin: 20px; }
+            .container { max-width: 1200px; margin: 0 auto; }
+            .plot { margin: 30px 0; padding: 20px; border: 1px solid #eee; border-radius: 5px; }
+            .plot img { max-width: 100%; height: auto; display: block; margin: 10px auto; }
+            table { border-collapse: collapse; width: 100%; margin: 20px 0; }
+            th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+            th { background-color: #f2f2f2; }
+            tr:nth-child(even) { background-color: #f9f9f9; }
+            .summary-stats { margin: 20px 0; padding: 15px; background-color: #f8f9fa; border-radius: 5px; }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>LLM Chunker Combined Performance Report</h1>
+            <p>Generated on: 2025-05-28 07:35:35</p>
+            
+            <h2>Summary Statistics</h2>
+            <div class="summary-stats">
+                <p><strong>Total Test Runs:</strong> 1</p>
+                <p><strong>Total Tests:</strong> 25</p>
+                <p><strong>Chunk Sizes Tested:</strong> 1, 5, 9, 13, 17, 21, 25, 29, 33, 37, 41, 45, 49, 53, 57, 61, 65, 69, 73, 77, 81, 85, 89, 93, 97</p>
+            </div>
+            
+            <h2>Normalized Metrics & Percent Differences</h2>
+            <p><strong>total_time_per_node</strong>: Normalizes total time by the number of nodes processed.<br>
+            <strong>pct_diff_vs_best</strong>: Percentage difference in normalized time vs. the best (lowest) for each chunk size.</p>
+            <table border="1" class="dataframe dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>run</th>
+      <th>chunk_size</th>
+      <th>nodes</th>
+      <th>chunks</th>
+      <th>extract_time</th>
+      <th>chunk_time</th>
+      <th>total_time</th>
+      <th>total_time_per_node</th>
+      <th>total_time_per_chunk</th>
+      <th>chunks_per_second</th>
+      <th>nodes_per_second</th>
+      <th>pct_diff_vs_baseline</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>test_outputs_20250527_153233</td>
+      <td>1</td>
+      <td>1490</td>
+      <td>212</td>
+      <td>100.58</td>
+      <td>1351.12</td>
+      <td>1451.70</td>
+      <td>0.974295</td>
+      <td>6.847642</td>
+      <td>0.156907</td>
+      <td>1.102789</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>test_outputs_20250527_153233</td>
+      <td>5</td>
+      <td>1490</td>
+      <td>87</td>
+      <td>100.41</td>
+      <td>1431.22</td>
+      <td>1531.63</td>
+      <td>1.027940</td>
+      <td>17.604943</td>
+      <td>0.060787</td>
+      <td>1.041070</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>test_outputs_20250527_153233</td>
+      <td>9</td>
+      <td>1490</td>
+      <td>90</td>
+      <td>99.98</td>
+      <td>1304.79</td>
+      <td>1404.78</td>
+      <td>0.942805</td>
+      <td>15.608667</td>
+      <td>0.068977</td>
+      <td>1.141946</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>test_outputs_20250527_153233</td>
+      <td>13</td>
+      <td>1490</td>
+      <td>113</td>
+      <td>100.10</td>
+      <td>1448.02</td>
+      <td>1548.12</td>
+      <td>1.039007</td>
+      <td>13.700177</td>
+      <td>0.078038</td>
+      <td>1.028991</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>test_outputs_20250527_153233</td>
+      <td>17</td>
+      <td>1490</td>
+      <td>88</td>
+      <td>100.24</td>
+      <td>1122.84</td>
+      <td>1223.07</td>
+      <td>0.820852</td>
+      <td>13.898523</td>
+      <td>0.078373</td>
+      <td>1.326992</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>test_outputs_20250527_153233</td>
+      <td>21</td>
+      <td>1490</td>
+      <td>71</td>
+      <td>100.61</td>
+      <td>935.31</td>
+      <td>1035.92</td>
+      <td>0.695248</td>
+      <td>14.590423</td>
+      <td>0.075911</td>
+      <td>1.593055</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>test_outputs_20250527_153233</td>
+      <td>25</td>
+      <td>1490</td>
+      <td>60</td>
+      <td>100.17</td>
+      <td>830.43</td>
+      <td>930.60</td>
+      <td>0.624564</td>
+      <td>15.510000</td>
+      <td>0.072252</td>
+      <td>1.794251</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>test_outputs_20250527_153233</td>
+      <td>29</td>
+      <td>1490</td>
+      <td>52</td>
+      <td>100.92</td>
+      <td>739.82</td>
+      <td>840.73</td>
+      <td>0.564248</td>
+      <td>16.167885</td>
+      <td>0.070287</td>
+      <td>2.014003</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>test_outputs_20250527_153233</td>
+      <td>33</td>
+      <td>1490</td>
+      <td>46</td>
+      <td>99.42</td>
+      <td>584.93</td>
+      <td>684.34</td>
+      <td>0.459289</td>
+      <td>14.876957</td>
+      <td>0.078642</td>
+      <td>2.547313</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>test_outputs_20250527_153233</td>
+      <td>37</td>
+      <td>1490</td>
+      <td>41</td>
+      <td>100.02</td>
+      <td>569.84</td>
+      <td>669.87</td>
+      <td>0.449577</td>
+      <td>16.338293</td>
+      <td>0.071950</td>
+      <td>2.614769</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>test_outputs_20250527_153233</td>
+      <td>41</td>
+      <td>1490</td>
+      <td>37</td>
+      <td>100.12</td>
+      <td>503.94</td>
+      <td>604.06</td>
+      <td>0.405409</td>
+      <td>16.325946</td>
+      <td>0.073421</td>
+      <td>2.956701</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>test_outputs_20250527_153233</td>
+      <td>45</td>
+      <td>1490</td>
+      <td>34</td>
+      <td>100.30</td>
+      <td>486.24</td>
+      <td>586.54</td>
+      <td>0.393651</td>
+      <td>17.251176</td>
+      <td>0.069924</td>
+      <td>3.064330</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>test_outputs_20250527_153233</td>
+      <td>49</td>
+      <td>1490</td>
+      <td>31</td>
+      <td>101.20</td>
+      <td>399.70</td>
+      <td>500.90</td>
+      <td>0.336174</td>
+      <td>16.158065</td>
+      <td>0.077558</td>
+      <td>3.727796</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>test_outputs_20250527_153233</td>
+      <td>53</td>
+      <td>1490</td>
+      <td>29</td>
+      <td>99.59</td>
+      <td>415.20</td>
+      <td>514.78</td>
+      <td>0.345490</td>
+      <td>17.751034</td>
+      <td>0.069846</td>
+      <td>3.588632</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>test_outputs_20250527_153233</td>
+      <td>57</td>
+      <td>1490</td>
+      <td>27</td>
+      <td>100.83</td>
+      <td>356.94</td>
+      <td>457.77</td>
+      <td>0.307228</td>
+      <td>16.954444</td>
+      <td>0.075643</td>
+      <td>4.174371</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>test_outputs_20250527_153233</td>
+      <td>61</td>
+      <td>1490</td>
+      <td>25</td>
+      <td>99.90</td>
+      <td>296.20</td>
+      <td>396.10</td>
+      <td>0.265839</td>
+      <td>15.844000</td>
+      <td>0.084402</td>
+      <td>5.030385</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>test_outputs_20250527_153233</td>
+      <td>65</td>
+      <td>1490</td>
+      <td>23</td>
+      <td>100.99</td>
+      <td>371.45</td>
+      <td>472.44</td>
+      <td>0.317074</td>
+      <td>20.540870</td>
+      <td>0.061920</td>
+      <td>4.011307</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>test_outputs_20250527_153233</td>
+      <td>69</td>
+      <td>1490</td>
+      <td>22</td>
+      <td>100.54</td>
+      <td>307.68</td>
+      <td>408.22</td>
+      <td>0.273973</td>
+      <td>18.555455</td>
+      <td>0.071503</td>
+      <td>4.842694</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>test_outputs_20250527_153233</td>
+      <td>73</td>
+      <td>1490</td>
+      <td>21</td>
+      <td>101.55</td>
+      <td>258.83</td>
+      <td>360.38</td>
+      <td>0.241866</td>
+      <td>17.160952</td>
+      <td>0.081134</td>
+      <td>5.756674</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>test_outputs_20250527_153233</td>
+      <td>77</td>
+      <td>1490</td>
+      <td>20</td>
+      <td>101.64</td>
+      <td>232.21</td>
+      <td>333.85</td>
+      <td>0.224060</td>
+      <td>16.692500</td>
+      <td>0.086129</td>
+      <td>6.416606</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>test_outputs_20250527_153233</td>
+      <td>81</td>
+      <td>1490</td>
+      <td>19</td>
+      <td>99.85</td>
+      <td>241.85</td>
+      <td>341.71</td>
+      <td>0.229336</td>
+      <td>17.984737</td>
+      <td>0.078561</td>
+      <td>6.160843</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>test_outputs_20250527_153233</td>
+      <td>85</td>
+      <td>1490</td>
+      <td>18</td>
+      <td>100.30</td>
+      <td>209.36</td>
+      <td>309.66</td>
+      <td>0.207826</td>
+      <td>17.203333</td>
+      <td>0.085976</td>
+      <td>7.116928</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>test_outputs_20250527_153233</td>
+      <td>89</td>
+      <td>1490</td>
+      <td>17</td>
+      <td>101.11</td>
+      <td>218.07</td>
+      <td>319.17</td>
+      <td>0.214208</td>
+      <td>18.774706</td>
+      <td>0.077957</td>
+      <td>6.832668</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>test_outputs_20250527_153233</td>
+      <td>93</td>
+      <td>1490</td>
+      <td>17</td>
+      <td>100.70</td>
+      <td>200.41</td>
+      <td>301.11</td>
+      <td>0.202087</td>
+      <td>17.712353</td>
+      <td>0.084826</td>
+      <td>7.434759</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>test_outputs_20250527_153233</td>
+      <td>97</td>
+      <td>1490</td>
+      <td>16</td>
+      <td>99.71</td>
+      <td>192.39</td>
+      <td>292.10</td>
+      <td>0.196040</td>
+      <td>18.256250</td>
+      <td>0.083164</td>
+      <td>7.744685</td>
+      <td>0.0</td>
+    </tr>
+  </tbody>
+</table>
+            
+            <h2>Performance Plots</h2>
+            <div class="plot">
+                <h3>Chunk Size vs Total Time</h3>
+                <p>This plot shows how the total processing time varies with different chunk sizes across all test runs.</p>
+                <img src="combined_chunk_size_vs_total_time.png" alt="Chunk Size vs Total Time">
+            </div>
+            <div class="plot">
+                <h3>Chunk Size vs Number of Chunks</h3>
+                <p>This plot shows the relationship between chunk size and the resulting number of chunks.</p>
+                <img src="combined_chunk_size_vs_num_chunks.png" alt="Chunk Size vs Number of Chunks">
+            </div>
+            <div class="plot">
+                <h3>Time Breakdown by Chunk Size</h3>
+                <p>This plot breaks down the time spent on extraction vs. chunking for different chunk sizes.</p>
+                <img src="combined_time_breakdown.png" alt="Time Breakdown">
+            </div>
+            <div class="plot">
+                <h3>Percent Change in Total Time vs First Run (Chunk Size 1)</h3>
+                <p>This plot displays the percent increase or decrease in total_time for every test/run compared to the first run with chunk size 1 as the baseline. Negative values (green) are faster than the baseline; positive values (red) are slower.</p>
+                <img src="percent_diff_vs_first_chunk1.png" alt="Percent Change vs Baseline">
+            </div>
+        </div>
+    </body>
+    </html>
+    
